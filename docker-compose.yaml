@@ -11,6 +11,8 @@ services:
   app:
     build: .
     restart: on-failure
+    volumes:
+      - ./logs/:/app/logs/
     depends_on:
       - db
     env_file:

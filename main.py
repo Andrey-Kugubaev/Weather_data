@@ -1,5 +1,5 @@
-from services.city import CityData
-from services.weather import WeatherCol
+from app.services.city import CityData
+from app.services.weather import WeatherCol
 
 
 if __name__ == '__main__':

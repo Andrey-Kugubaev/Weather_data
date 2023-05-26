@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker
 
 from constant import db_path, DATAFILE
 from db import Base, City
-from schemas import CityListCreate
+from app.schemas import CityListCreate
 
 
 class CityData:

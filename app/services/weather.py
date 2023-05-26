@@ -11,7 +11,7 @@ from sqlalchemy.orm import sessionmaker
 
 from constant import api_key, base_url, db_path, si_value, sentry_dsn
 from db import Base, City, Weather
-from schemas import WeatherDataCreate
+from app.schemas import WeatherDataCreate
 
 
 sentry_sdk.init(
@@ -69,7 +69,7 @@ class WeatherCol:
                 'feel_temperature': weather_data['main']['feels_like'],
                 'humidity': weather_data['main']['humidity']
             }
-            log_path = os.path.join("..", "valid_logs.log")
+            log_path = os.path.join("./logs/", "valid_logs.log")
             logging.basicConfig(
                 level=logging.INFO,
                 filename=log_path,
