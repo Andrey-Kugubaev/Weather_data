@@ -7,4 +7,5 @@ if __name__ == '__main__':
     cities_list.load_from_csv()
 
     col = WeatherCol()
+    col.collect_weather()
     col.schedule_task()
